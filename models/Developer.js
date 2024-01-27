@@ -9,6 +9,9 @@ const DevSchema = new mongoose.Schema({
   },
   role: {
     type: String
+  },
+  token: {
+    type: String
   }
 });
 
