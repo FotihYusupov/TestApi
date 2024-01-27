@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <section class="container mx-auto px-24 mt-6 mb-8">
+            <div class="flex w-full items-center justify-between">
+                <h1 class="text-4xl font-medium">API Docs</h1>
+                <p class="text-xl"><b>BASE URL: </b>http://localhost:3001</p>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="container mx-auto px-24">
+            <details class="mt-5" open>
+                <summary class="text-2xl cursor-pointer">Product Routes</summary>
+                <div class="mt-6">
+                    <p class="bg-[#8fa9ff] text-white rounded-t-[20px] px-8 py-2 text-3xl">POST</p>
+                    <div>
+                        <div class="border text-xl py-6 px-10">
+                            <div class="flex justify-between text-xl">
+                                <p>Add new product.</p>
+                                <p>[base url] + /api/add-product</p>
+                            </div>
+                            <details class="block mt-4">
+                                <summary class="cursor-pointer text-xl">Example</summary>
+                                <div class="w-90 h-[50%] bg-gray mt-6">
+                                    <img class="w-full h-full" src="images/addProduct.png" alt="Example img">
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <p class="bg-orange-500 text-white rounded-t-[20px] px-8 py-2 text-3xl">PUT</p>
+                    <div>
+                        <div class="border text-xl py-6 px-10">
+                            <div class="flex justify-between text-xl">
+                                <p>Update product.</p>
+                                <p>[base url] + /api/update-product/:productId</p>
+                            </div>
+                            <details class="block mt-4">
+                                <summary class="cursor-pointer text-xl">Example</summary>
+                                <div class="w-90 h-[50%] bg-gray mt-6">
+                                    <img class="w-full h-full" src="images/updateProduct.png" alt="Example img">
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <p class="bg-red-500 rounded-t-[20px] text-white px-8 py-2 text-3xl">DELETE</p>
+                    <div>
+                        <div class="border text-xl py-6 px-10">
+                            <div class="flex justify-between text-xl">
+                                <p>Delete product.</p>
+                                <p>[base url] + /api/delete-product/:productId</p>
+                            </div>
+                            <details class="block mt-4">
+                                <summary class="cursor-pointer text-xl">Example</summary>
+                                <div class="w-90 h-[50%] bg-gray mt-6">
+                                    <img class="w-full h-full" src="images/deleteProduct.png" alt="Example img">
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </details>
+            <hr class="mt-6">
+
+            <details class="mt-5">
+                <summary class="text-2xl cursor-pointer">Category Routes</summary>
+                <div class="mt-6">
+                    <p class="bg-[#8fa9ff] text-white rounded-t-[20px] px-8 py-2 text-3xl">POST</p>
+                    <div>
+                        <div class="border text-xl py-6 px-10">
+                            <div class="flex justify-between text-xl">
+                                <p>Add new category.</p>
+                                <p>[base url] + /api/add-category</p>
+                            </div>
+                            <details class="block mt-4">
+                                <summary class="cursor-pointer text-xl">Example</summary>
+                                <div class="w-90 h-[50%] bg-gray mt-6">
+                                    <img class="w-full h-full" src="images/addCategory.png" alt="Example img">
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <p class="bg-orange-500 text-white rounded-t-[20px] px-8 py-2 text-3xl">PUT</p>
+                    <div>
+                        <div class="border text-xl py-6 px-10">
+                            <div class="flex justify-between text-xl">
+                                <p>Update category.</p>
+                                <p>[base url] + /api/update-category/:categoryId</p>
+                            </div>
+                            <details class="block mt-4">
+                                <summary class="cursor-pointer text-xl">Example</summary>
+                                <div class="w-90 h-[50%] bg-gray mt-6">
+                                    <img class="w-full h-full" src="images/updateCategory.png" alt="Example img">
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <p class="bg-red-500 rounded-t-[20px] text-white px-8 py-2 text-3xl">DELETE</p>
+                    <div>
+                        <div class="border text-xl py-6 px-10">
+                            <div class="flex justify-between text-xl">
+                                <p>Delete category.</p>
+                                <p>[base url] + /api/delete-category/:categoryId</p>
+                            </div>
+                            <details class="block mt-4">
+                                <summary class="cursor-pointer text-xl">Example</summary>
+                                <div class="w-90 h-[50%] bg-gray mt-6">
+                                    <img class="w-full h-full" src="images/deleteCategory.png" alt="Example img">
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </details>
+            <hr class="mt-6">
+
+            <details class="mt-5">
+                <summary class="text-2xl cursor-pointer">Orders Routes</summary>
+                <div class="mt-6">
+                    <p class="bg-[#00FF00] text-white rounded-t-[20px] px-8 py-2 text-3xl">GET</p>
+                    <div>                        
+                        <div class="border text-xl py-6 px-10">
+                            <div class="flex justify-between text-xl">
+                                <p>Get all orders.</p>
+                                <p>[base url] + /api/orders/false</p>
+                            </div>
+                            <p>Unconfirmed orders can be checked only by the admin, for this a token must be sent via Bearer in the headers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <p class="bg-orange-500 text-white rounded-t-[20px] px-8 py-2 text-3xl">PUT</p>
+                    <div>
+                        <div class="border text-xl py-6 px-10">
+                            <div class="flex justify-between text-xl">
+                                <p>Check orders.</p>
+                                <p>[base url] + /api/check/:orderId</p>
+                            </div>
+                            <details class="block mt-4">
+                                <summary class="cursor-pointer text-xl">Example</summary>
+                                <div class="w-90 h-[50%] bg-gray mt-6">
+                                    <img class="w-full h-full" src="images/checkOrder.png" alt="Example img">
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </section>
+    </main>
+</body>
+</html>

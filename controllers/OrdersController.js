@@ -1,6 +1,7 @@
 const Users = require('../models/Users')
 const Orders = require('../models/Orders')
 const Basked = require('../models/Basked')
+const Products = require('../models/Products')
 
 exports.getAllOrders = async (req, res) => {
     try {
@@ -31,6 +32,16 @@ exports.GetOrder = async (req, res) => {
     }
 };
 
+exports.byToken = async (req, res) => {
+    try {
+        const { userId } = req.headers;
+        const findOrders = await Orders.find({ user: userId }).populate('user')
+        return res.json(findOrders)
+    } catch (err) {
+        return res.json(err)
+    }
+};
+
 exports.AddOrder = async (req, res) => {
     try {
         const { userId } = req.headers;
@@ -39,8 +50,12 @@ exports.AddOrder = async (req, res) => {
         if(findUser) {
             const newOrder = new Orders({
                 user: userId,
-                orders: orders
-            })
+                orders: []
+            });
+            for(product of orders) {
+                const findProduct = await Products.findById(product.id);
+                newOrder.orders.push(findProduct);
+            }
             await newOrder.save()
             return res.json('New order added');
         }

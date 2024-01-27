@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <section class="container mx-auto px-24 mt-4">
+            <div class="flex w-full items-center justify-between">
+                <h1 class="text-4xl font-medium">API Docs</h1>
+                <p class="text-xl"><b>BASE URL: </b>http://localhost:3001</p>
+            </div>
+        </section>
+    </header>
+    <main class="container mx-auto px-24">
+        
+        <details class="mt-5" open>
+            <summary class="text-2xl cursor-pointer">User Routes</summary>
+            <div class="mt-6">
+                <p class="bg-[#00FF00] text-white rounded-t-[20px] px-8 py-2 text-3xl">GET</p>
+                <div>
+                    <div class="border text-xl py-6 px-10">
+                        <div class="flex justify-between text-xl">
+                            <p>Get user orders (Send user token in headers Bearer).</p>
+                            <p>[base url] + /api/order</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6">
+                <p class="bg-[#8fa9ff] text-white rounded-t-[20px] px-8 py-2 text-3xl">POST</p>
+                <div>
+                    <div class="border text-xl py-6 px-10">
+                        <div class="flex justify-between text-xl">
+                            <p>Sign Up</p>
+                            <p>[base url] + /api/sign-up</p>
+                        </div>
+                        <details class="block mt-4">
+                            <summary class="cursor-pointer text-xl">Example</summary>
+                            <div class="w-90 h-[50%] bg-gray mt-6">
+                                <img class="w-full h-full" src="images/signUp.png" alt="Example img">
+                            </div>
+                        </details>
+                    </div>
+                    <div class="border text-xl py-6 px-10">
+                        <div class="flex justify-between text-xl">
+                            <p>Log In</p>
+                            <p>[base url] + /api/log-in</p>
+                        </div>
+                        <details class="block mt-4">
+                            <summary class="cursor-pointer text-xl">Example</summary>
+                            <div class="w-90 h-[50%] bg-gray mt-6">
+                                <img class="w-full h-full" src="images/logIn.png" alt="Example img">
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6">
+                <p class="bg-orange-500 text-white rounded-t-[20px] px-8 py-2 text-3xl">PUT</p>
+                <div>
+                    <div class="border text-xl py-6 px-10">
+                        <div class="flex justify-between text-xl">
+                            <p>Change user information</p>
+                            <p>[base url] + /api/change</p>
+                        </div>
+                        <details class="block mt-4">
+                            <summary class="cursor-pointer text-xl">Example</summary>
+                            <div class="w-90 h-[50%] bg-gray mt-6">
+                                <img class="w-full h-full" src="images/change.png" alt="Example img">
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <hr class="mt-6">
+
+        <details class="mt-5">
+            <summary class="text-2xl cursor-pointer">Product Routes</summary>
+            <div class="mt-6">
+                <p class="bg-[#00FF00] text-white rounded-t-[20px] px-8 py-2 text-3xl">GET</p>
+                <div>
+                    <div class="border text-xl py-6 px-10">
+                        <div class="flex justify-between text-xl">
+                            <p>Get all products (uz, kr, en, ru).</p>
+                            <p>[base url] + /api/products/:lang</p>
+                        </div>
+                        <details class="block mt-4">
+                            <summary class="cursor-pointer text-xl">Examples</summary>
+                            <div class="w-90 h-[50%] bg-gray mt-6">
+                                <ol class="w-[100%]">
+                                    <li class="border-2 p-2 border-bold mb-2">[base url] + /api/products/uz</li>
+                                    <li class="border-2 p-2 border-bold mb-2">[base url] + /api/products/kr</li>
+                                    <li class="border-2 p-2 border-bold mb-2">[base url] + /api/products/en</li>
+                                    <li class="border-2 p-2 border-bold">[base url] + /api/products/ru</li>
+                                </ol>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex justify-between border text-xl p-10">
+                        <p>Get only one product by id</p>
+                        <p>[base url] + /api/product/:lang/:productId</p>
+                    </div>
+                    <div class="flex justify-between border text-xl p-10">
+                        <p>Get products by category</p>
+                        <p>[base url] + /api/category/:lang/:categoryId</p>
+                    </div>
+                    <div class="flex justify-between border text-xl p-10">
+                        <p>Search products by title</p>
+                        <p>[base url] + /api/search/:lang/:title</p>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <hr class="mt-6">
+
+        <details class="mt-5">
+            <summary class="text-2xl cursor-pointer">Category Routes</summary>
+            <div class="mt-6">
+                <p class="bg-[#00FF00] text-white rounded-t-[20px] px-8 py-2 text-3xl">GET</p>
+                <div>
+                    <div class="border text-xl py-6 px-10">
+                        <div class="flex justify-between text-xl">
+                            <p>Get all categories (uz, kr, en, ru).</p>
+                            <p>[base url] + /api/categories/:lang</p>
+                        </div>
+                        <details class="block mt-4">
+                            <summary class="cursor-pointer text-xl">Examples</summary>
+                            <div class="w-90 h-[50%] bg-gray mt-6">
+                                <ol class="w-[100%]">
+                                    <li class="border-2 p-2 border-bold mb-2">[base url] + /api/categories/uz</li>
+                                    <li class="border-2 p-2 border-bold mb-2">[base url] + /api/categories/kr</li>
+                                    <li class="border-2 p-2 border-bold mb-2">[base url] + /api/categories/en</li>
+                                    <li class="border-2 p-2 border-bold">[base url] + /api/categories/ru</li>
+                                </ol>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <hr class="mt-6">
+
+        <details class="mt-5">
+            <summary class="text-2xl cursor-pointer">Basked Routes</summary>
+            <div class="mt-6">
+                <p class="bg-[#00FF00] text-white rounded-t-[20px] px-8 py-2 text-3xl">GET</p>
+                <div>
+                    <div class="border text-xl py-6 px-10">
+                        <div class="flex justify-between text-xl">
+                            <p>Get user basked.</p>
+                            <p>[base url] + /api/basked/:lang</p>
+                        </div>
+                        <p>Send user token in headers Bearer</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <p class="bg-[#8fa9ff] text-white rounded-t-[20px] px-8 py-2 text-3xl">POST</p>
+                <div>
+                    <div class="border text-xl py-6 px-10">
+                        <div class="flex justify-between text-xl">
+                            <p>Add to basked</p>
+                            <p>[base url] + /api/add-basked/:productId</p>
+                        </div>
+                        <p>Send user token in headers Bearer</p>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <hr class="mt-6">
+
+        <details class="mt-5">
+            <summary class="text-2xl cursor-pointer">Favorites Routes</summary>
+            <div class="mt-6">
+                <p class="bg-[#00FF00] text-white rounded-t-[20px] px-8 py-2 text-3xl">GET</p>
+                <div>
+                    <div class="border text-xl py-6 px-10">
+                        <div class="flex justify-between text-xl">
+                            <p>Get user favorites.</p>
+                            <p>[base url] + /api/favorites/:lang</p>
+                        </div>
+                        <p>Send user token in headers Bearer</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <p class="bg-[#8fa9ff] text-white rounded-t-[20px] px-8 py-2 text-3xl">POST</p>
+                <div>
+                    <div class="border text-xl py-6 px-10">
+                        <div class="flex justify-between text-xl">
+                            <p>Add to favorites</p>
+                            <p>[base url] + /api/add-favorites/:productId</p>
+                        </div>
+                        <p>Send user token in headers Bearer</p>
+                    </div>
+                </div>
+            </div>
+        </details>
+    </main>
+</body>
+</html>

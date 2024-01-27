@@ -8,18 +8,23 @@ fetch('baseUrl/delete-admin/:UserId', {
 .then(res => res.json())
 .then(data => console.log(data))
 
-fetch('baseUrl/add-product', {
+fetch('baseUrl/add-category', {
     method: "POST",
     headers: {
         'Content-type': 'application/json',
         Authorization: `Bearer ${token}`,
     },
-    body: formData,
+    body: JSON.stringify({
+        categoryNameUz: 'category name uz',
+        categoryNameEn: 'category name en',
+        categoryNameKr: 'category name kr',
+        categoryNameRu: 'category name ru'
+    }),
 })
 .then(res => res.json())
 .then(data => console.log(data))
 
-fetch('baseUrl/delete-product/:ProductId', {
+fetch('baseUrl/delete-category/:categoryId', {
     method: 'DELETE',
     headers: {
         'Content-type': 'application/json',

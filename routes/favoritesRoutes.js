@@ -4,7 +4,7 @@ const favoritesController = require('../controllers/favoritesController')
 
 const router = Router()
 
-router.get('/favorites', authMiddleware, favoritesController.getFavorites);
+router.get('/favorites/:lang', authMiddleware, favoritesController.getFavorites);
 router.post('/add-favorites/:productId', authMiddleware, favoritesController.addFavorites);
 
 module.exports = router;

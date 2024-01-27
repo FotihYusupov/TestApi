@@ -3,6 +3,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const router = require('./routes/router');
+const cookieParser = require('cookie-parser');
+const viewsRoutes = require('./routes/viewsRoutes')
 const path = require('path')
 
 dotenv.config();
@@ -10,6 +12,8 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
+
+app.use(cookieParser());
 
 mongoose.connect(process.env.MONGO_URL)
   .then(() => console.log('mongodb connected'))
@@ -20,13 +24,10 @@ app.set('view engine', 'ejs');
 
 app.use(cors());
 
-app.get('/', (req, res) => {
-  res.render('index')
-})
-
 app.use(express.static('uploads'));
 app.use(express.static('assets'));
 
 app.use('/api', router);
+app.use(viewsRoutes);
 
 app.listen(process.env.PORT || 3001, () => console.log('server is run'));
