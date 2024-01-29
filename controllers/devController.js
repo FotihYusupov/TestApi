@@ -14,7 +14,6 @@ exports.Create = async (req, res) => {
     try {
         const { name, password, role } = req.body
         const token = sign('developer');
-        console.log(typeof token);
         const newDev = new Dev({
             token: token,
             name: name,
@@ -37,10 +36,12 @@ exports.Login = async (req, res) => {
             return res.redirect('nova');
         }
         const findUser = await Dev.findOne({ name: name, password: password });
+        console.log(findUser);
         if(findUser) {
-            res.cookie('userRole', findUser.role);
-            return res.redirect('user');
+            res.cookie('userRole', findUser.role)
+            return res.render('user');
         }
+        console.log('hello');
         return res.json('user not found');
     } catch (err) {
         return res.json(err);
