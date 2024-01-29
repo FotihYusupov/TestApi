@@ -24,6 +24,7 @@ exports.Create = async (req, res) => {
         await newDev.save();
         return res.json(newDev);
     } catch (err) {
+        console.log(err);
         return res.json(err)
     }
 };
